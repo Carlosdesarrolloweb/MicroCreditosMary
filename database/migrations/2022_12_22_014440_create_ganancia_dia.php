@@ -19,7 +19,7 @@ class CreateGananciaDia extends Migration
             $table->datetime('fecha');
             
             $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('id_cliente');
             $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
             $table->unsignedBigInteger('id_pago');

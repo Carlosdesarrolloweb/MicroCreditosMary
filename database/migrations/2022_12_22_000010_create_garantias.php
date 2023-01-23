@@ -16,6 +16,8 @@ class CreateGarantias extends Migration
         Schema::create('garantias', function (Blueprint $table) {
             $table->id();
             $table->string('garantia');
+            $table->string('Valor_Prenda');
+            $table->string('Detalle_Prenda');
 
             $table->unsignedBigInteger('id_cliente');
             $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');

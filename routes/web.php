@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrarController;
+use App\Http\Controllers\SessionController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,10 @@ Route::get('/', function () {
     return view('login.login');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/register', [App\Http\Controllers\RegistrarController::class, 'create'])->name('register.index');
+Route::get('/login', [App\Http\Controllers\SessionController::class, 'create'])->name('login.index');

@@ -27,7 +27,7 @@ class CreatePrestamo extends Migration
             $table->unsignedBigInteger('id_cliente');
             $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
             $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('id_interes');
             $table->foreign('id_interes')->references('id')->on('intereses')->onDelete('cascade');
             $table->unsignedBigInteger('id_modo_pago');

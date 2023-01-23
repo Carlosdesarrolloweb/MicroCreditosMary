@@ -20,7 +20,7 @@ class CreatePagos extends Migration
             $table->unsignedBigInteger('id_prestamo');
             $table->foreign('id_prestamo')->references('id')->on('prestamo')->onDelete('cascade');
             $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
 
         });
     }
